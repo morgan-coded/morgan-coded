@@ -17,6 +17,7 @@ I am building public OSS history through small, verified PRs in TypeScript, Reac
 
 Recent merged upstream work:
 
+- [import-js/eslint-plugin-import#3258](https://github.com/import-js/eslint-plugin-import/pull/3258)
 - [remix-run/react-router#15111](https://github.com/remix-run/react-router/pull/15111)
 - [remix-run/react-router#15113](https://github.com/remix-run/react-router/pull/15113)
 - [remix-run/react-router#15114](https://github.com/remix-run/react-router/pull/15114)
