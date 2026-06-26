@@ -1,22 +1,32 @@
 # Morgan Carr
 
-I build TypeScript/Node tools, Shopify app reliability systems, and practical AI/MCP developer tooling.
+Night-time coder building TypeScript/Node tools, practical AI/MCP developer tooling, and reliability fixes for real systems.
 
-My strongest lanes are integration reliability, webhook handling, AST-based static analysis, and small focused fixes in codebases I actually use.
+I have 14 merged upstream OSS PRs across React Router, Rollup, ast-grep, eslint tooling, Conform, arethetypeswrong, and related TypeScript/Node projects.
+
+My strongest lanes are integration reliability, webhooks, AST-based static analysis, linting/package tooling, and small focused fixes in codebases I actually use.
 
 ## Public Work
 
 - [ast-lens-mcp](https://github.com/morgan-coded/ast-lens-mcp) - MCP server for AST-based code intelligence in TypeScript/JavaScript projects.
 - [chrome-review](https://github.com/morgan-coded/chrome-review) - static analyzer for Chrome MV3 extensions.
-- [packbridge](https://github.com/morgan-coded/packbridge) - Shopify B2B pack-unit normalization with signed webhook delivery.
-- [script-sentinel](https://github.com/morgan-coded/script-sentinel) - Shopify Plus Scripts-to-Functions migration audit app.
 
 ## OSS
 
-I am building public OSS history through small, verified PRs in TypeScript, React Router, Shopify, MCP, docs, linting, and tooling projects.
+I ship small, tested upstream fixes in codebases I use and study closely.
 
 Recent merged upstream work:
 
+- [ota-meshi/eslint-plugin-regexp#992](https://github.com/ota-meshi/eslint-plugin-regexp/pull/992)
+- [ota-meshi/eslint-plugin-yml#618](https://github.com/ota-meshi/eslint-plugin-yml/pull/618)
+- [arethetypeswrong#272](https://github.com/arethetypeswrong/arethetypeswrong.github.io/pull/272)
+- [un-ts/eslint-plugin-import-x#494](https://github.com/un-ts/eslint-plugin-import-x/pull/494)
+- [ast-grep/ast-grep#2727](https://github.com/ast-grep/ast-grep/pull/2727)
+- [rollup/rollup#6411](https://github.com/rollup/rollup/pull/6411)
+- [edmundhung/conform#1233](https://github.com/edmundhung/conform/pull/1233)
+- [remix-run/react-router#15170](https://github.com/remix-run/react-router/pull/15170)
+- [eslint-community/eslint-plugin-n#536](https://github.com/eslint-community/eslint-plugin-n/pull/536)
+- [ast-grep/ast-grep#2684](https://github.com/ast-grep/ast-grep/pull/2684)
 - [import-js/eslint-plugin-import#3258](https://github.com/import-js/eslint-plugin-import/pull/3258)
 - [remix-run/react-router#15111](https://github.com/remix-run/react-router/pull/15111)
 - [remix-run/react-router#15113](https://github.com/remix-run/react-router/pull/15113)
@@ -24,5 +34,5 @@ Recent merged upstream work:
 
 ## Currently
 
-- Computer Science student at Southern New Hampshire University.
-- Working mostly in TypeScript, Node.js, React/Remix, Prisma/PostgreSQL, Vitest, Playwright, and MCP.
+- Shipping focused upstream fixes with tests in TypeScript/Node, React/Remix, linting, package-analysis, and developer tooling projects.
+- Working mostly with TypeScript, Node.js, React/Remix, Prisma/PostgreSQL, Vitest, Playwright, and MCP.
