@@ -2,7 +2,7 @@
 
 Night-time coder building TypeScript/Node tools, practical AI/MCP developer tooling, and reliability fixes for real systems.
 
-I have 14 merged upstream OSS PRs across React Router, Rollup, ast-grep, eslint tooling, Conform, arethetypeswrong, and related TypeScript/Node projects.
+I have 22 merged upstream OSS PRs across React Router, Rollup, ast-grep, eslint tooling, Conform, arethetypeswrong, knip, Cline, swagger-typescript-api, and related TypeScript/Node projects.
 
 My strongest lanes are integration reliability, webhooks, AST-based static analysis, linting/package tooling, and small focused fixes in codebases I actually use.
 
@@ -17,6 +17,14 @@ I ship small, tested upstream fixes in codebases I use and study closely.
 
 Recent merged upstream work:
 
+- [webpro-nl/knip#1848](https://github.com/webpro-nl/knip/pull/1848)
+- [eslint-stylistic/eslint-stylistic#1228](https://github.com/eslint-stylistic/eslint-stylistic/pull/1228)
+- [cline/cline#12023](https://github.com/cline/cline/pull/12023)
+- [mskelton/eslint-plugin-playwright#472](https://github.com/mskelton/eslint-plugin-playwright/pull/472)
+- [eslint-community/eslint-plugin-eslint-plugin#631](https://github.com/eslint-community/eslint-plugin-eslint-plugin/pull/631)
+- [acacode/swagger-typescript-api#1803](https://github.com/acacode/swagger-typescript-api/pull/1803)
+- [gajus/eslint-plugin-jsdoc#1705](https://github.com/gajus/eslint-plugin-jsdoc/pull/1705)
+- [rjsf-team/react-jsonschema-form#5132](https://github.com/rjsf-team/react-jsonschema-form/pull/5132)
 - [ota-meshi/eslint-plugin-regexp#992](https://github.com/ota-meshi/eslint-plugin-regexp/pull/992)
 - [ota-meshi/eslint-plugin-yml#618](https://github.com/ota-meshi/eslint-plugin-yml/pull/618)
 - [arethetypeswrong#272](https://github.com/arethetypeswrong/arethetypeswrong.github.io/pull/272)
