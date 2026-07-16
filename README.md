@@ -1,46 +1,36 @@
 # Morgan Carr
 
-Night-time coder building TypeScript/Node tools, practical AI/MCP developer tooling, and reliability fixes for real systems.
+**AI/LLM & TypeScript engineer** — I build LLM integrations, MCP tooling, and static-analysis / developer tools, and I ship focused, tested fixes upstream in the libraries I use.
 
-I have 22 merged upstream OSS PRs across React Router, Rollup, ast-grep, eslint tooling, Conform, arethetypeswrong, knip, Cline, swagger-typescript-api, and related TypeScript/Node projects.
+Night-time coder. My work lands as small, well-tested pull requests in real projects — **40+ merged into external open-source repos**, including the official OpenAI Node SDK, promptfoo, txtai, kysely, react-jsonschema-form, ast-grep, protobuf.js, and meriyah.
 
-My strongest lanes are integration reliability, webhooks, AST-based static analysis, linting/package tooling, and small focused fixes in codebases I actually use.
+**Focus areas**
+- **AI / LLM** — OpenAI/Anthropic SDKs, structured outputs, streaming, tool/function calling, RAG, and MCP (Model Context Protocol) servers
+- **TypeScript / Node** — SDK & API work, type-level correctness, parsers/ASTs
+- **Static analysis & tooling** — ESLint plugins, linting, package analysis, and the edge-case fixes that get merged into major libraries
+- **Backend reliability** — REST APIs, Postgres/Prisma, webhooks, idempotency
 
-## Public Work
+## Projects
 
-- [ast-lens-mcp](https://github.com/morgan-coded/ast-lens-mcp) - MCP server for AST-based code intelligence in TypeScript/JavaScript projects.
-- [chrome-review](https://github.com/morgan-coded/chrome-review) - static analyzer for Chrome MV3 extensions.
+- **[ast-lens-mcp](https://github.com/morgan-coded/ast-lens-mcp)** — MCP server for AST-based code intelligence on TypeScript/JavaScript codebases ([npm](https://www.npmjs.com/package/ast-lens-mcp)).
+- **[mcp-source-lint](https://github.com/morgan-coded/mcp-source-lint)** — static checks for MCP server source that catch stdio corruption and missing handler input schemas.
+- **[agent-bisect](https://github.com/morgan-coded/agent-bisect)** — git-bisect for agent runs: deterministically localizes the first breaking step in an agent transcript, and abstains when it can't.
+- **[chrome-review](https://github.com/morgan-coded/chrome-review)** — TypeScript static analyzer for Chrome MV3 extensions.
 
-## OSS
+## Recent upstream contributions
 
-I ship small, tested upstream fixes in codebases I use and study closely.
+- [openai/openai-node #1985](https://github.com/openai/openai-node/pull/1985) · [#1987](https://github.com/openai/openai-node/pull/1987) — Zod v4-mini schema support + stream rehydration in the official OpenAI SDK
+- [promptfoo/promptfoo #9994](https://github.com/promptfoo/promptfoo/pull/9994) — RAG grader variable precedence
+- [neuml/txtai #1130](https://github.com/neuml/txtai/pull/1130) — new dense ANN index backend
+- [kysely-org/kysely #1919](https://github.com/kysely-org/kysely/pull/1919) — Postgres session-level advisory locking for exclusive migrations
+- [cline/cline #12023](https://github.com/cline/cline/pull/12023) — crash fix in structured run-command history export
+- [rjsf-team/react-jsonschema-form #5152](https://github.com/rjsf-team/react-jsonschema-form/pull/5152) — option-description rendering across 12 widgets
+- [meriyah/meriyah #576](https://github.com/meriyah/meriyah/pull/576) — parser fix for class fields named `get`/`set`
+- [protobufjs/protobuf.js #2358](https://github.com/protobufjs/protobuf.js/pull/2358) — parser hardening against malformed input
+- [ast-grep/ast-grep #2787](https://github.com/ast-grep/ast-grep/pull/2787) — bounded-channel backpressure
 
-Recent merged upstream work:
+…plus merged fixes across the ESLint plugin ecosystem (eslint-plugin-n, -regexp, -yml, -playwright, -import-x, eslint-stylistic, and more).
 
-- [webpro-nl/knip#1848](https://github.com/webpro-nl/knip/pull/1848)
-- [eslint-stylistic/eslint-stylistic#1228](https://github.com/eslint-stylistic/eslint-stylistic/pull/1228)
-- [cline/cline#12023](https://github.com/cline/cline/pull/12023)
-- [mskelton/eslint-plugin-playwright#472](https://github.com/mskelton/eslint-plugin-playwright/pull/472)
-- [eslint-community/eslint-plugin-eslint-plugin#631](https://github.com/eslint-community/eslint-plugin-eslint-plugin/pull/631)
-- [acacode/swagger-typescript-api#1803](https://github.com/acacode/swagger-typescript-api/pull/1803)
-- [gajus/eslint-plugin-jsdoc#1705](https://github.com/gajus/eslint-plugin-jsdoc/pull/1705)
-- [rjsf-team/react-jsonschema-form#5132](https://github.com/rjsf-team/react-jsonschema-form/pull/5132)
-- [ota-meshi/eslint-plugin-regexp#992](https://github.com/ota-meshi/eslint-plugin-regexp/pull/992)
-- [ota-meshi/eslint-plugin-yml#618](https://github.com/ota-meshi/eslint-plugin-yml/pull/618)
-- [arethetypeswrong#272](https://github.com/arethetypeswrong/arethetypeswrong.github.io/pull/272)
-- [un-ts/eslint-plugin-import-x#494](https://github.com/un-ts/eslint-plugin-import-x/pull/494)
-- [ast-grep/ast-grep#2727](https://github.com/ast-grep/ast-grep/pull/2727)
-- [rollup/rollup#6411](https://github.com/rollup/rollup/pull/6411)
-- [edmundhung/conform#1233](https://github.com/edmundhung/conform/pull/1233)
-- [remix-run/react-router#15170](https://github.com/remix-run/react-router/pull/15170)
-- [eslint-community/eslint-plugin-n#536](https://github.com/eslint-community/eslint-plugin-n/pull/536)
-- [ast-grep/ast-grep#2684](https://github.com/ast-grep/ast-grep/pull/2684)
-- [import-js/eslint-plugin-import#3258](https://github.com/import-js/eslint-plugin-import/pull/3258)
-- [remix-run/react-router#15111](https://github.com/remix-run/react-router/pull/15111)
-- [remix-run/react-router#15113](https://github.com/remix-run/react-router/pull/15113)
-- [remix-run/react-router#15114](https://github.com/remix-run/react-router/pull/15114)
+## Tech
 
-## Currently
-
-- Shipping focused upstream fixes with tests in TypeScript/Node, React/Remix, linting, package-analysis, and developer tooling projects.
-- Working mostly with TypeScript, Node.js, React/Remix, Prisma/PostgreSQL, Vitest, Playwright, and MCP.
+TypeScript · Node.js · Python · React/Remix · Postgres/Prisma · Vitest · Playwright · MCP · OpenAI/Anthropic SDKs
