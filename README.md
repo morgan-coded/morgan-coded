@@ -1,36 +1,21 @@
 # Morgan Carr
 
-**AI/LLM & TypeScript engineer** — I build LLM integrations, MCP tooling, and static-analysis / developer tools, and I ship focused, tested fixes upstream in the libraries I use.
+TypeScript/Node engineer working on AI infrastructure, SDKs, parsers, and static analysis.
+These examples are merged upstream work, followed by original projects with runnable proof and explicit scope boundaries.
 
-Night-time coder. My work lands as small, well-tested pull requests in real projects — **40+ merged into external open-source repos**, including the official OpenAI Node SDK, promptfoo, txtai, kysely, react-jsonschema-form, ast-grep, protobuf.js, and meriyah.
+## Selected upstream work
 
-**Focus areas**
-- **AI / LLM** — OpenAI/Anthropic SDKs, structured outputs, streaming, tool/function calling, RAG, and MCP (Model Context Protocol) servers
-- **TypeScript / Node** — SDK & API work, type-level correctness, parsers/ASTs
-- **Static analysis & tooling** — ESLint plugins, linting, package analysis, and the edge-case fixes that get merged into major libraries
-- **Backend reliability** — REST APIs, Postgres/Prisma, webhooks, idempotency
+| Problem | Contribution | Outcome |
+|---|---|---|
+| [txtai #1164](https://github.com/neuml/txtai/pull/1164) needed a fixed-dimensional LEMUR path; its training path then needed to move out of pooling in [#1172](https://github.com/neuml/txtai/pull/1172). | Added the encoder and trainer, measured matched-size exact retrieval, then moved training and validation selection into `LemurTrainer` with progress reporting. | Both changes merged. At the matched 2,048-dimensional budget, LEMUR-MLP improved NDCG@10 by 56.6% on nfcorpus, 49.4% on scifact, and 61.9% on arguana; the trainer move kept config and all seven tensors byte-identical under a fixed seed. |
+| [openai-node #2021](https://github.com/openai/openai-node/pull/2021) could lose server error metadata before `response.created`, while delayed async iteration could finish without rejecting. | Converted error frames before accumulation and generic event emission, then reused `EventStream.events()` failure retention for iteration. | `HAYDEN-OAI` added final test polish and merged the change into the official SDK. |
+| [meriyah #612](https://github.com/meriyah/meriyah/pull/612) routed decorators through general member/call parsing, accepting forms outside the decorator grammar and producing incorrect computed-field shapes. | Implemented the decorator grammar directly and added fail cases, AST-shape assertions, and controls for valid forms. | The fix merged. The maintainers then invited me as a collaborator and asked that changes continue through PRs, including small fixes. |
+| [kysely #1919](https://github.com/kysely-org/kysely/pull/1919) could release migration locks too early when migrations ran without a surrounding transaction. | Implemented PostgreSQL session-level locking and serialization with a real concurrent-migrator regression. | The maintainer added the acquisition timeout and MSSQL session-lock path, fixed the flaky test, and merged the result. |
+| OpenLIT's trace-analysis dimensions were wired across separate paths, making focused extensions touch several surfaces. | Added the registry foundation in [#1354](https://github.com/openlit/openlit/pull/1354), then extended it with prompt-injection observability in [#1376](https://github.com/openlit/openlit/pull/1376) and tool-misuse evidence in [#1394](https://github.com/openlit/openlit/pull/1394). | Maintainers approved and merged each stage, preserving one registry path for later dimensions. |
 
-## Projects
+## Own projects
 
-- **[ast-lens-mcp](https://github.com/morgan-coded/ast-lens-mcp)** — MCP server for AST-based code intelligence on TypeScript/JavaScript codebases ([npm](https://www.npmjs.com/package/ast-lens-mcp)).
-- **[mcp-source-lint](https://github.com/morgan-coded/mcp-source-lint)** — static checks for MCP server source that catch stdio corruption and missing handler input schemas.
-- **[agent-bisect](https://github.com/morgan-coded/agent-bisect)** — git-bisect for agent runs: deterministically localizes the first breaking step in an agent transcript, and abstains when it can't.
-- **[chrome-review](https://github.com/morgan-coded/chrome-review)** — TypeScript static analyzer for Chrome MV3 extensions.
-
-## Recent upstream contributions
-
-- [openai/openai-node #1985](https://github.com/openai/openai-node/pull/1985) · [#1987](https://github.com/openai/openai-node/pull/1987) — Zod v4-mini schema support + stream rehydration in the official OpenAI SDK
-- [promptfoo/promptfoo #9994](https://github.com/promptfoo/promptfoo/pull/9994) — RAG grader variable precedence
-- [neuml/txtai #1130](https://github.com/neuml/txtai/pull/1130) — new dense ANN index backend
-- [kysely-org/kysely #1919](https://github.com/kysely-org/kysely/pull/1919) — Postgres session-level advisory locking for exclusive migrations
-- [cline/cline #12023](https://github.com/cline/cline/pull/12023) — crash fix in structured run-command history export
-- [rjsf-team/react-jsonschema-form #5152](https://github.com/rjsf-team/react-jsonschema-form/pull/5152) — option-description rendering across 12 widgets
-- [meriyah/meriyah #576](https://github.com/meriyah/meriyah/pull/576) — parser fix for class fields named `get`/`set`
-- [protobufjs/protobuf.js #2358](https://github.com/protobufjs/protobuf.js/pull/2358) — parser hardening against malformed input
-- [ast-grep/ast-grep #2787](https://github.com/ast-grep/ast-grep/pull/2787) — bounded-channel backpressure
-
-…plus merged fixes across the ESLint plugin ecosystem (eslint-plugin-n, -regexp, -yml, -playwright, -import-x, eslint-stylistic, and more).
-
-## Tech
-
-TypeScript · Node.js · Python · React/Remix · Postgres/Prisma · Vitest · Playwright · MCP · OpenAI/Anthropic SDKs
+- **[ast-lens-mcp](https://github.com/morgan-coded/ast-lens-mcp)** — a TypeScript MCP server with twelve read-only tools for structural code queries, with syntactic limits documented explicitly.
+- **[agent-bisect](https://github.com/morgan-coded/agent-bisect)** — a deterministic CLI for locating the first visible breaking step in an agent run and abstaining when the evidence is insufficient.
+- **[script-sentinel](https://github.com/morgan-coded/script-sentinel)** — a read-only Shopify Plus migration-risk app with the workflow, architecture, and product boundaries documented.
+- **[chrome-review](https://github.com/morgan-coded/chrome-review)** — a static-only Chrome MV3 extension analyzer with no extension-code execution or telemetry.
